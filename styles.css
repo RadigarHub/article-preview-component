@@ -1,0 +1,221 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(217, 19%, 35%);
+}
+
+.article {
+    justify-content: center;
+    margin: 80px 25px 20px;
+    border-radius: 10px;
+    background-color: hsl(210, 46%, 95%);
+}
+
+@media (min-width: 768px) {
+    .article {
+        display: flex;
+        margin: 0;
+        margin-bottom: 20px;
+        height: 280px;
+    }
+}
+
+.article-header {
+    height: 201px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .article-header {
+        width: 286px;
+        height: unset;
+        border-top-right-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+.article-header img {
+    position: relative;
+    top: -15px;
+    width: 100%;
+    filter: brightness(1.05);
+}
+
+@media (min-width: 768px) {
+    .article-header img {
+        position: unset;
+        top: unset;
+        width: unset;
+        height: 100%;
+    }
+}
+
+.article-body {
+    position: relative;
+    padding: 35px 34px 5px;
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+    .article-body {
+        width: 445px;
+        padding: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+.article-text {
+    margin-bottom: 21px;
+}
+
+@media (min-width: 768px) {
+    .article-text {
+        margin: 0;
+        padding: 35px 40px 0 40px;
+    }
+}
+
+.article-text h1 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@media (min-width: 768px) {
+    .article-text h1 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+.article-text p {
+    margin: 12px 0;
+    line-height: 20px;
+    color: hsl(214, 17%, 51%);
+}
+
+.article-user {
+    display: flex;
+    align-items: center;
+    height: 66px;
+}
+
+@media (min-width: 768px) {
+    .article-user {
+        padding: 0 40px;
+        height: 55px;
+    }
+}
+
+.user-image {
+    display: flex;
+    align-items: center;
+}
+
+.user-image img {
+    width: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.user-info span {
+    display: block;
+    margin-top: 5px;
+    color: hsl(212, 23%, 69%);
+}
+
+.share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+}
+
+.article-share-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(212, 23%, 69%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    clip-path: circle(0 at calc(100% - 50px) 50%);
+    transition: clip-path 0.4s ease;
+}
+
+@media (min-width: 768px) {
+    .article-share-bar {
+        left: 260px;
+        bottom: 93px;
+        width: 250px;
+        height: 55px;
+        border-radius: 10px;
+        clip-path: circle(0 at 51% 140%);
+    }
+
+    .article-share-bar::before {
+        position: absolute;
+        bottom: -12px;
+        left: 116px;
+        width: 0;
+        height: 0;
+        content: "";
+        border-top: 12px solid hsl(217, 19%, 35%);
+        border-right: 12px solid transparent;
+        border-left: 12px solid transparent;
+    }
+}
+
+.article-share-bar span {
+    margin-left: 35px;
+    margin-right: 10px;
+}
+
+.article-share-bar img {
+    margin: 8px;
+}
+
+.article-share-bar .share-button {
+    margin-right: 34px;
+    background-color: hsl(214, 17%, 51%);
+}
+
+@media (min-width: 768px) {
+    .article-share-bar .share-button {
+        display: none;
+    }
+}
+
+.article-share-bar .share-button svg path {
+    fill: white;
+}
+
+
+.attribution { font-size: 11px; text-align: center; margin-bottom: 105px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 768px) {
+    .attribution {
+        margin-bottom: 0;
+    }
+}
